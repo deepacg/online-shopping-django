@@ -1,0 +1,54 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        
+          <h1>Products</h1>
+
+          {% for product in products %}
+          <div class="col-md-3">
+          <div class="card" >
+              <img src="{{product.image}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Price: &#8377;{{product.price}}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+        
+    </div>
+</div>
+{% endblock %}
+
+<!-- <h2>Products</h2>
+
+<ul>
+    {% for product in products %}
+    <li>{{product.name}}</li>
+    {% endfor %}
+</ul>
+
+<table border='1'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><img style="width:100px" src={{product.image}} alt=""></td>
+            <td><button>Add to cart</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table> -->
+
